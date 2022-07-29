@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 const Editor = dynamic(() => import("../components/Editor"), {
   ssr: false,
 });
-
 const Home: NextPage = () => {
   const [EditorInstance, setEditorInstance] = useState(null);
   useEffect(() => {
@@ -15,7 +14,7 @@ const Home: NextPage = () => {
   }, [EditorInstance]);
 
   return (
-    <main>
+    <main className="wrapper">
       <Editor setEditorInstance={setEditorInstance} />
     </main>
   );

@@ -2,7 +2,7 @@ import { useEffect, FC, SetStateAction } from "react";
 import { Editor, rootCtx, ThemeColor } from "@milkdown/core";
 import { ReactEditor, useEditor } from "@milkdown/react";
 import { gfm } from "@milkdown/preset-gfm";
-import { tokyo, tokyoDark } from "@milkdown/theme-tokyo";
+import { nayu } from "../components/nayu-theme";
 import { upload } from "@milkdown/plugin-upload";
 import { emoji } from "@milkdown/plugin-emoji";
 import { block } from "@milkdown/plugin-block";
@@ -22,7 +22,7 @@ const MilkdownEditor: React.FC<MilkdownEditorProps> = (
       .config((ctx) => {
         ctx.set(rootCtx, root);
       })
-      .use(tokyo)
+      .use(nayu)
       .use(listener)
       .use(history)
       .use(emoji)

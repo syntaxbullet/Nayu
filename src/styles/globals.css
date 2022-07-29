@@ -4,10 +4,29 @@
 
 /* milkdown editor overrides */
 body {
-  @apply bg-stone-50;
+  @apply bg-white;
+}
+.wrapper {
+  display: inline-flex;
+  min-height: 100vh;
+}
+.collectionSelect__control {
+  @apply bg-stone-100 !important;
+}
+.collectionSelect__value-container {
+  @apply bg-stone-100 !important;
+}
+.collectionSelect__option {
+  @apply hover:bg-cyan-200 active:bg-cyan-500 !important;
+}
+.collectionSelect__indicators {
+  @apply bg-stone-100 !important;
 }
 .milkdown {
-  @apply shadow-none border max-w-6xl my-8 rounded font-sans !important;
+  @apply max-w-[1440px] my-8 font-sans shadow-none !important;
+}
+.editor {
+  @apply p-12 !important;
 }
 .editor p {
   @apply m-0 !important;
