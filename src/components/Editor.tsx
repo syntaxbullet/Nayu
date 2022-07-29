@@ -1,8 +1,15 @@
 import { useEffect, FC, SetStateAction } from "react";
-import { Editor, rootCtx } from "@milkdown/core";
+import { Editor, rootCtx, ThemeColor } from "@milkdown/core";
 import { ReactEditor, useEditor } from "@milkdown/react";
 import { gfm } from "@milkdown/preset-gfm";
-import { nord } from "@milkdown/theme-nord";
+import { tokyo, tokyoDark } from "@milkdown/theme-tokyo";
+import { upload } from "@milkdown/plugin-upload";
+import { emoji } from "@milkdown/plugin-emoji";
+import { block } from "@milkdown/plugin-block";
+import { clipboard } from "@milkdown/plugin-clipboard";
+import { prism } from "@milkdown/plugin-prism";
+import { history } from "@milkdown/plugin-history";
+import { listener, listenerCtx } from "@milkdown/plugin-listener";
 
 type MilkdownEditorProps = {
   setEditorInstance: SetStateAction<any>;
@@ -15,7 +22,14 @@ const MilkdownEditor: React.FC<MilkdownEditorProps> = (
       .config((ctx) => {
         ctx.set(rootCtx, root);
       })
-      .use(nord)
+      .use(tokyo)
+      .use(listener)
+      .use(history)
+      .use(emoji)
+      .use(clipboard)
+      .use(block)
+      .use(upload)
+      .use(prism)
       .use(gfm)
   );
 

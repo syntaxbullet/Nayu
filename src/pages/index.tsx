@@ -1,10 +1,8 @@
 import type { NextPage } from "next";
 import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
-
 // dynamic import required for the editor component.
 const Editor = dynamic(() => import("../components/Editor"), {
-  suspense: true,
   ssr: false,
 });
 
@@ -16,7 +14,11 @@ const Home: NextPage = () => {
     }
   }, [EditorInstance]);
 
-  return <Editor setEditorInstance={setEditorInstance} />;
+  return (
+    <main>
+      <Editor setEditorInstance={setEditorInstance} />
+    </main>
+  );
 };
 
 export default Home;
