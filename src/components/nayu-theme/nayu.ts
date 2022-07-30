@@ -13,14 +13,14 @@ export const lightColor: Record<Color, string> = {
 };
 
 export const darkColor: Record<Color, string> = {
-  shadow: "#a9b1d6",
-  primary: "#f7768e",
-  secondary: "#e0af68",
-  neutral: "#c0caf5",
-  solid: "#7dcfff",
-  line: "#bb9af7",
-  background: "#1a1b26",
-  surface: "#24283b",
+  shadow: "#1c1917",
+  primary: "#06b6d4",
+  secondary: "#84cc16",
+  neutral: "#fff",
+  solid: "#44403c",
+  line: "#eee",
+  background: "#1c1917",
+  surface: "#1c1917",
 };
 
 export const color = {

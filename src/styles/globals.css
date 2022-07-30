@@ -4,29 +4,24 @@
 
 /* milkdown editor overrides */
 body {
-  @apply bg-white;
+  @apply bg-white dark:bg-stone-900 !important;
 }
 .wrapper {
-  display: inline-flex;
+  display: grid;
   min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  grid-template-columns: 1fr;
+  @apply lg:flex !important;
 }
-.collectionSelect__control {
-  @apply bg-stone-100 !important;
-}
-.collectionSelect__value-container {
-  @apply bg-stone-100 !important;
-}
-.collectionSelect__option {
-  @apply hover:bg-cyan-200 active:bg-cyan-500 !important;
-}
-.collectionSelect__indicators {
-  @apply bg-stone-100 !important;
+.wrapper.dark {
+  @apply bg-stone-900 !important;
 }
 .milkdown {
   @apply max-w-[1440px] my-8 font-sans shadow-none !important;
 }
 .editor {
-  @apply p-12 !important;
+  @apply p-12 max-w-[90vw] mx-auto !important;
 }
 .editor p {
   @apply m-0 !important;
